@@ -14,3 +14,6 @@ pip install numpy
 The processed data can be found in 'src/data'.
 
 The codes for processing raw data can be found in 'src/dataset'.
+
+## Algorithm 
+The implementation of the algorithm is available in the 'src/SER'.
