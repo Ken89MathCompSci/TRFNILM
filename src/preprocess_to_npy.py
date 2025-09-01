@@ -19,8 +19,11 @@ def preprocess_appliance(appliance):
 
     dfs = []
     for csv_file in csv_files:
-        df = pd.read_csv(os.path.join(folder, csv_file))
+        df = pd.read_csv(os.path.join(folder, csv_file), na_values=[''])
         df = df.dropna(subset=["power"])
+        df['timestamp'] = pd.to_datetime(df['timestamp'])
+        # Convert timestamp to seconds since epoch
+        df['timestamp_seconds'] = df['timestamp'].astype(np.int64) // 10**9
         dfs.append(df)
 
     # Concatenate all dataframes
@@ -29,8 +32,10 @@ def preprocess_appliance(appliance):
         return
     df_all = pd.concat(dfs, ignore_index=True)
 
-    X = df_all["power"].values.reshape(-1, 1)
-    Y = df_all["power"].values
+    # X: timestamp as seconds since epoch, shape (n_samples, 1)
+    X = df_all["timestamp_seconds"].values.reshape(-1, 1)
+    # Y: power readings, shape (n_samples,)
+    Y = df_all["power"].values.astype(float)
 
     np.save(os.path.join(folder, "X.npy"), X)
     np.save(os.path.join(folder, "Y.npy"), Y)
