@@ -1,0 +1,145 @@
+{
+    "Target": {
+        "Accuracy": 100.0,
+        "F1_macro": 100.0,
+        "Precision": 100.0,
+        "Recall": 100.0,
+        "MAE": 0.0,
+        "SAE": 0.0,
+        "Number of samples": 90,
+        "Confusion_Matrix": {
+            "True_Charger": {
+                "Pred_Charger": 9,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Fan": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 9,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_GameConsole": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 9,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Kettle": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 9,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_LEDLight": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 9,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_LightBulb": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 9,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Microwave": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 9,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_PowerSupply": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 9,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_TV": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 9,
+                "Pred_Toaster": 0
+            },
+            "True_Toaster": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 9
+            }
+        },
+        "Class_Names": [
+            "Charger",
+            "Fan",
+            "GameConsole",
+            "Kettle",
+            "LEDLight",
+            "LightBulb",
+            "Microwave",
+            "PowerSupply",
+            "TV",
+            "Toaster"
+        ]
+    }
+}

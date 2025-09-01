@@ -1,0 +1,43 @@
+{
+    "Target": {
+        "Accuracy": 100.0,
+        "F1_macro": 100.0,
+        "Precision": 100.0,
+        "Recall": 100.0,
+        "MAE": 0.0,
+        "SAE": 0.0,
+        "Number of samples": 36,
+        "Confusion_Matrix": {
+            "True_Charger": {
+                "Pred_Charger": 9,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0
+            },
+            "True_HairDryer": {
+                "Pred_Charger": 0,
+                "Pred_HairDryer": 9,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0
+            },
+            "True_Kettle": {
+                "Pred_Charger": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 9,
+                "Pred_LEDLight": 0
+            },
+            "True_LEDLight": {
+                "Pred_Charger": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 9
+            }
+        },
+        "Class_Names": [
+            "Charger",
+            "HairDryer",
+            "Kettle",
+            "LEDLight"
+        ]
+    }
+}

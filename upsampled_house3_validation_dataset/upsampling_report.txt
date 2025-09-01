@@ -1,0 +1,80 @@
+HOUSE 3 VALIDATION DATASET UPSAMPLING REPORT
+==================================================
+
+Processing Date: 2025-08-29 23:34:07
+Target Datapoints: 28800 per file
+Upsampling Method: Time-based interpolation
+
+UPSAMPLING RESULTS:
+------------------------------
+Appliance: meter10
+Output File: meter10_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter11
+Output File: meter11_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter12
+Output File: meter12_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter13
+Output File: meter13_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter14
+Output File: meter14_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter15
+Output File: meter15_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter16
+Output File: meter16_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter17
+Output File: meter17_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter18
+Output File: meter18_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter19
+Output File: meter19_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter1
+Output File: meter1_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter7
+Output File: meter7_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+Appliance: meter9
+Output File: meter9_validation_data.csv
+Rows: 28,800 (target: 28,800)
+Success: True
+
+SUMMARY:
+Files Processed: 13/13
+Successful Upsampling: 13
+Total Rows Generated: 374,400
+Expected Total Rows: 374,400
+Efficiency: 100.0%

@@ -1,0 +1,91 @@
+HOUSE 3 VALIDATION DATASET EXTRACTION REPORT
+==================================================
+
+Extraction Date: 2025-08-29 22:55:08
+Time Period: 2011-05-23 10:31:24 to 2011-05-24 10:31:21
+Total Duration: 24 hours
+
+EXTRACTION RESULTS:
+------------------------------
+Appliance/Meter: meter10
+Output File: meter10_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter11
+Output File: meter11_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter12
+Output File: meter12_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter13
+Output File: meter13_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter14
+Output File: meter14_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter15
+Output File: meter15_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter16
+Output File: meter16_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter17
+Output File: meter17_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter18
+Output File: meter18_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter19
+Output File: meter19_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter1
+Output File: meter1_validation_data.csv
+Rows Extracted: 82,232
+Status: Success
+Time Range: 2011-05-23 06:31:24-04:00 to 2011-05-24 06:31:21-04:00
+
+Appliance/Meter: meter7
+Output File: meter7_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+Appliance/Meter: meter9
+Output File: meter9_validation_data.csv
+Rows Extracted: 21,655
+Status: Success
+Time Range: 2011-05-23 06:31:26-04:00 to 2011-05-24 06:31:20-04:00
+
+SUMMARY:
+Total Files Processed: 13/13
+Successful Extractions: 13
+Total Rows Extracted: 342,092

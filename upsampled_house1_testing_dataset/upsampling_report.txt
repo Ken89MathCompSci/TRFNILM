@@ -1,0 +1,109 @@
+HOUSE 1 TESTING DATASET UPSAMPLING REPORT
+==================================================
+
+Processing Date: 2025-08-30 16:29:58
+Input Directory: house_1_testing_dataset
+Output Directory: upsampled_house1_testing_dataset
+Target Rows: 915,840
+
+UPSAMPLING RESULTS:
+------------------------------
+Filename: meter11_('microwave',_1)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter12_('unknown',_1),_original_name_=_bathroom_gfi_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter13_('electric_space_heater',_1)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter14_('electric_stove',_1)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter15_('sockets',_3)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter16_('sockets',_4)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter17_('light',_2)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter18_('light',_3)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter19_('unknown',_2),_original_name_=_washer_dryer_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter1_meter1_data.csv
+Original Rows: 0
+Upsampled Rows: 0
+Status: Error: module 'pandas' has no attribute 'np'
+
+Filename: meter2_meter2_data.csv
+Original Rows: 0
+Upsampled Rows: 0
+Status: Error: module 'pandas' has no attribute 'np'
+
+Filename: meter5_('fridge',_1)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter6_('dish_washer',_1)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter7_('sockets',_1)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter8_('sockets',_2)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Filename: meter9_('light',_1)_data.csv
+Original Rows: 719,637
+Upsampled Rows: 915,840
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+SUMMARY:
+Total Files Processed: 14/16
+Successful Upsampling: 14
+Total Original Rows: 10,074,918
+Total Final Rows: 12,821,760

@@ -1,0 +1,85 @@
+{
+    "Target": {
+        "Accuracy": 98.4126984126984,
+        "F1_macro": 98.4077841662981,
+        "Precision": 98.57142857142858,
+        "Recall": 98.41269841269842,
+        "MAE": 0.015873015873015872,
+        "SAE": 0.411522633744856,
+        "Number of samples": 63,
+        "Confusion_Matrix": {
+            "True_Charger": {
+                "Pred_Charger": 9,
+                "Pred_Fan": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0
+            },
+            "True_Fan": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 9,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0
+            },
+            "True_HairDryer": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_HairDryer": 9,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0
+            },
+            "True_Kettle": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_HairDryer": 1,
+                "Pred_Kettle": 8,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0
+            },
+            "True_LEDLight": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 9,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0
+            },
+            "True_LightBulb": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 9,
+                "Pred_Mixer": 0
+            },
+            "True_Mixer": {
+                "Pred_Charger": 0,
+                "Pred_Fan": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 9
+            }
+        },
+        "Class_Names": [
+            "Charger",
+            "Fan",
+            "HairDryer",
+            "Kettle",
+            "LEDLight",
+            "LightBulb",
+            "Mixer"
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "Target": {
+        "Accuracy": 92.06349206349206,
+        "F1_macro": 91.3999044433827,
+        "Precision": 94.89795918367346,
+        "Recall": 92.06349206349206,
+        "MAE": 0.23809523809523808,
+        "SAE": 3.787878787878788,
+        "Number of samples": 63,
+        "Confusion_Matrix": {
+            "True_HairDryer": {
+                "Pred_HairDryer": 9,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_Mixer": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Kettle": {
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 9,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_Mixer": 0,
+                "Pred_Toaster": 0
+            },
+            "True_LEDLight": {
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 9,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_Mixer": 0,
+                "Pred_Toaster": 0
+            },
+            "True_LightBulb": {
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 9,
+                "Pred_Microwave": 0,
+                "Pred_Mixer": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Microwave": {
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 9,
+                "Pred_Mixer": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Mixer": {
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 5,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_Mixer": 4,
+                "Pred_Toaster": 0
+            },
+            "True_Toaster": {
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Microwave": 0,
+                "Pred_Mixer": 0,
+                "Pred_Toaster": 9
+            }
+        },
+        "Class_Names": [
+            "HairDryer",
+            "Kettle",
+            "LEDLight",
+            "LightBulb",
+            "Microwave",
+            "Mixer",
+            "Toaster"
+        ]
+    }
+}

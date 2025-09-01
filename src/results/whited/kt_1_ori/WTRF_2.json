@@ -1,0 +1,103 @@
+{
+    "Target": {
+        "Accuracy": 98.61111111111111,
+        "F1_macro": 98.60681114551085,
+        "Precision": 98.75,
+        "Recall": 98.61111111111111,
+        "MAE": 0.09722222222222222,
+        "SAE": 1.8518518518518516,
+        "Number of samples": 72,
+        "Confusion_Matrix": {
+            "True_Fan": {
+                "Pred_Fan": 9,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_GameConsole": {
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 9,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_HairDryer": {
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 9,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Kettle": {
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 8,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 1
+            },
+            "True_LEDLight": {
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 9,
+                "Pred_LightBulb": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_LightBulb": {
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 9,
+                "Pred_TV": 0,
+                "Pred_Toaster": 0
+            },
+            "True_TV": {
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_TV": 9,
+                "Pred_Toaster": 0
+            },
+            "True_Toaster": {
+                "Pred_Fan": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_TV": 0,
+                "Pred_Toaster": 9
+            }
+        },
+        "Class_Names": [
+            "Fan",
+            "GameConsole",
+            "HairDryer",
+            "Kettle",
+            "LEDLight",
+            "LightBulb",
+            "TV",
+            "Toaster"
+        ]
+    }
+}

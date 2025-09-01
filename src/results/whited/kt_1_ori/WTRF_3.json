@@ -1,0 +1,123 @@
+{
+    "Target": {
+        "Accuracy": 98.76543209876543,
+        "F1_macro": 98.76160990712076,
+        "Precision": 98.88888888888889,
+        "Recall": 98.76543209876544,
+        "MAE": 0.1111111111111111,
+        "SAE": 2.083333333333333,
+        "Number of samples": 81,
+        "Confusion_Matrix": {
+            "True_Charger": {
+                "Pred_Charger": 9,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_Toaster": 0
+            },
+            "True_GameConsole": {
+                "Pred_Charger": 0,
+                "Pred_GameConsole": 9,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_Toaster": 0
+            },
+            "True_HairDryer": {
+                "Pred_Charger": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 9,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Kettle": {
+                "Pred_Charger": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 9,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_Toaster": 0
+            },
+            "True_LEDLight": {
+                "Pred_Charger": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 9,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_Toaster": 0
+            },
+            "True_LightBulb": {
+                "Pred_Charger": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 9,
+                "Pred_Mixer": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_Toaster": 0
+            },
+            "True_Mixer": {
+                "Pred_Charger": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 9,
+                "Pred_PowerSupply": 0,
+                "Pred_Toaster": 0
+            },
+            "True_PowerSupply": {
+                "Pred_Charger": 1,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0,
+                "Pred_PowerSupply": 8,
+                "Pred_Toaster": 0
+            },
+            "True_Toaster": {
+                "Pred_Charger": 0,
+                "Pred_GameConsole": 0,
+                "Pred_HairDryer": 0,
+                "Pred_Kettle": 0,
+                "Pred_LEDLight": 0,
+                "Pred_LightBulb": 0,
+                "Pred_Mixer": 0,
+                "Pred_PowerSupply": 0,
+                "Pred_Toaster": 9
+            }
+        },
+        "Class_Names": [
+            "Charger",
+            "GameConsole",
+            "HairDryer",
+            "Kettle",
+            "LEDLight",
+            "LightBulb",
+            "Mixer",
+            "PowerSupply",
+            "Toaster"
+        ]
+    }
+}

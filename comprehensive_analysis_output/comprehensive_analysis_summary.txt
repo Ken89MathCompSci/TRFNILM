@@ -1,0 +1,31 @@
+COMPREHENSIVE REDD HOUSE 3 ANALYSIS SUMMARY
+==================================================
+
+Analysis Date: 2025-08-27 21:43:48
+Dataset: redd.h5
+Building: 3
+
+FILES CREATED:
+------------------------------
+
+Direct Pandas:
+  Total size: 190.38 MB (13 files)
+  - pandas_direct__meter1_house3.csv            46.11 MB (Meter Data)
+  - pandas_direct__meter10_house3.csv           11.96 MB (Meter Data)
+  - pandas_direct__meter11_house3.csv           12.13 MB (Meter Data)
+  - pandas_direct__meter12_house3.csv           11.99 MB (Meter Data)
+  - pandas_direct__meter13_house3.csv           11.96 MB (Meter Data)
+  - pandas_direct__meter14_house3.csv           11.98 MB (Meter Data)
+  - pandas_direct__meter15_house3.csv           11.95 MB (Meter Data)
+  - pandas_direct__meter16_house3.csv           11.95 MB (Meter Data)
+  - pandas_direct__meter17_house3.csv           12.15 MB (Meter Data)
+  - pandas_direct__meter18_house3.csv           11.95 MB (Meter Data)
+  - pandas_direct__meter19_house3.csv           12.06 MB (Meter Data)
+  - pandas_direct__meter7_house3.csv            12.23 MB (Meter Data)
+  - pandas_direct__meter9_house3.csv            11.96 MB (Meter Data)
+
+TOTAL FILES: 13
+TOTAL SIZE: 190.38 MB
+
+METHOD SUCCESS:
+------------------------------

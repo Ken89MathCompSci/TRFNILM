@@ -1,0 +1,139 @@
+HOUSE 1 TESTING DATASET EXTRACTION REPORT
+==================================================
+
+Extraction Date: 2025-08-30 15:10:11
+Dataset File: redd.h5
+Building: 1
+Time Period: 2011-04-18 09:22:12 to 2011-05-23 09:21:51
+Duration: 34 days
+
+EXTRACTION RESULTS:
+------------------------------
+Meter ID: 1
+Appliance: meter1
+Output File: meter1_meter1_data.csv
+Rows Extracted: 1,460,718
+Status: Success
+Time Range: 2011-04-18 09:22:12-04:00 to 2011-05-23 09:21:51-04:00
+
+Meter ID: 2
+Appliance: meter2
+Output File: meter2_meter2_data.csv
+Rows Extracted: 1,460,718
+Status: Success
+Time Range: 2011-04-18 09:22:12-04:00 to 2011-05-23 09:21:51-04:00
+
+Meter ID: 5
+Appliance: ('fridge',_1)
+Output File: meter5_('fridge',_1)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 6
+Appliance: ('dish_washer',_1)
+Output File: meter6_('dish_washer',_1)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 7
+Appliance: ('sockets',_1)
+Output File: meter7_('sockets',_1)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 8
+Appliance: ('sockets',_2)
+Output File: meter8_('sockets',_2)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 9
+Appliance: ('light',_1)
+Output File: meter9_('light',_1)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 11
+Appliance: ('microwave',_1)
+Output File: meter11_('microwave',_1)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 12
+Appliance: ('unknown',_1),_original_name_=_bathroom_gfi
+Output File: meter12_('unknown',_1),_original_name_=_bathroom_gfi_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 13
+Appliance: ('electric_space_heater',_1)
+Output File: meter13_('electric_space_heater',_1)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 14
+Appliance: ('electric_stove',_1)
+Output File: meter14_('electric_stove',_1)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 15
+Appliance: ('sockets',_3)
+Output File: meter15_('sockets',_3)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 16
+Appliance: ('sockets',_4)
+Output File: meter16_('sockets',_4)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 17
+Appliance: ('light',_2)
+Output File: meter17_('light',_2)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 18
+Appliance: ('light',_3)
+Output File: meter18_('light',_3)_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: 19
+Appliance: ('unknown',_2),_original_name_=_washer_dryer
+Output File: meter19_('unknown',_2),_original_name_=_washer_dryer_data.csv
+Rows Extracted: 719,637
+Status: Success
+Time Range: 2011-04-18 09:22:13-04:00 to 2011-05-23 09:21:49-04:00
+
+Meter ID: (3, 4)
+Appliance: ('electric_oven',_1)
+Output File: meter(3, 4)_('electric_oven',_1)_data.csv
+Rows Extracted: 0
+Status: No data in time range
+
+Meter ID: (10, 20)
+Appliance: ('washer_dryer',_1)
+Output File: meter(10, 20)_('washer_dryer',_1)_data.csv
+Rows Extracted: 0
+Status: No data in time range
+
+SUMMARY:
+Total Meters Processed: 16/18
+Successful Extractions: 16
+Total Rows Extracted: 12,996,354

@@ -11,15 +11,47 @@ from collections import Counter
 from sklearn.preprocessing import LabelEncoder
 from dataset.load_cooll_data import *
 from dataset.load_whited_data import *
-from sklearn.metrics import recall_score, precision_score, f1_score, accuracy_score
+from sklearn.metrics import recall_score, precision_score, f1_score, accuracy_score, mean_absolute_error, confusion_matrix
 from sklearn.ensemble import RandomForestClassifier
 from dataset.load_plaid_data import leave_one_house_out_plaid, split_tune_set, split_tune_set_percentage
 from SER.WeightedRF import WeightedRandomForest
 
 
+def calculate_sae(y_true, y_pred, label_encoder):
+    """
+    Calculate Signal Aggregate Error (SAE)
+    SAE = |sum(y_true) - sum(y_pred)| / sum(y_true)
+    
+    For classification, we convert labels back to original form if needed
+    """
+    try:
+        # For encoded labels, we use the numeric values directly
+        # This assumes higher label values correspond to higher energy appliances
+        true_sum = np.sum(y_true)
+        pred_sum = np.sum(y_pred)
+        
+        if true_sum == 0:
+            return 0.0 if pred_sum == 0 else 100.0
+        
+        sae = abs(true_sum - pred_sum) / true_sum * 100
+        return float(sae)
+    except:
+        return 0.0
+
+def format_confusion_matrix(cm, class_names):
+    """
+    Format confusion matrix as a readable dictionary
+    """
+    cm_dict = {}
+    for i, true_class in enumerate(class_names):
+        cm_dict[f"True_{true_class}"] = {}
+        for j, pred_class in enumerate(class_names):
+            cm_dict[f"True_{true_class}"][f"Pred_{pred_class}"] = int(cm[i, j])
+    return cm_dict
+
 def sample_from_large_categories(Xt, yt, n_samples=1):
-    # houses = dict([(key, []) for key in range(n)])
-    # houses_ids = dict([(key, []) for key in range(n)])
+    # houses = dict([(key, []) for key in range(n)]
+    # houses_ids = dict([(key, []) for key in range(n)]
     wanted_appl = np.unique(yt)
 
     idx = []
@@ -89,6 +121,23 @@ def exp_case2_transfer(args, input_feature, label, dataset, house_label=None, am
         tgt_model.update_forest(X_tune, y_tune)
 
         yt_pred = tgt_model.predict(Xtest)
+        
+        # Calculate additional metrics
+        mae = mean_absolute_error(ytest, yt_pred)
+        sae = calculate_sae(ytest, yt_pred, le)
+        
+        # Generate confusion matrix
+        cm = confusion_matrix(ytest, yt_pred)
+        unique_labels = np.unique(np.concatenate([ytest, yt_pred]))
+        
+        # Get class names (try to inverse transform, fallback to numeric labels)
+        try:
+            class_names = [str(le.inverse_transform([label])[0]) for label in unique_labels]
+        except:
+            class_names = [f"Class_{label}" for label in unique_labels]
+        
+        # Format confusion matrix
+        cm_formatted = format_confusion_matrix(cm, class_names)
 
         results = {
             "Target": {
@@ -96,7 +145,11 @@ def exp_case2_transfer(args, input_feature, label, dataset, house_label=None, am
                 "F1_macro": float(f1_score(ytest, yt_pred, average="macro") * 100),
                 "Precision": float(precision_score(ytest, yt_pred, average="macro") * 100),
                 "Recall": float(recall_score(ytest, yt_pred, average="macro") * 100),
-                "Number of samples": len(ytest)
+                "MAE": float(mae),
+                "SAE": float(sae),
+                "Number of samples": len(ytest),
+                "Confusion_Matrix": cm_formatted,
+                "Class_Names": class_names
             }
         }
 
