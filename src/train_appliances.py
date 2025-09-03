@@ -5,6 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, mean_absolute_error
 from SER.WeightedRF import WeightedRandomForest
+import joblib  # Add this import
 
 APPLIANCES = ["dish_washer", "refrigerator", "microwave", "washer_dryer"]
 PREPROCESS_ROOT = "preprocess"
@@ -12,10 +13,8 @@ PREPROCESS_ROOT = "preprocess"
 def train_trfnilm(X, y, n_trees=10, k_target=1):
     le = LabelEncoder()
     y_enc = le.fit_transform(y)
-    # Check if all classes have at least 2 samples
     unique, counts = np.unique(y_enc, return_counts=True)
     if np.any(counts < 2):
-        # Not enough samples for stratification
         X_train, X_test, y_train, y_test = train_test_split(X, y_enc, test_size=0.2)
     else:
         X_train, X_test, y_train, y_test = train_test_split(X, y_enc, test_size=0.2, stratify=y_enc)
@@ -35,7 +34,8 @@ def train_trfnilm(X, y, n_trees=10, k_target=1):
         "f1_macro": f1_score(y_test_final, y_pred, average="macro"),
         "precision": precision_score(y_test_final, y_pred, average="macro"),
         "recall": recall_score(y_test_final, y_pred, average="macro"),
-        "mae": mean_absolute_error(y_test_final, y_pred)
+        "mae": mean_absolute_error(y_test_final, y_pred),
+        "model": tgt_model  # Return the trained model
     }
 
 def main():
@@ -49,7 +49,11 @@ def main():
         X = np.load(X_path)
         y = np.load(Y_path)
         results = train_trfnilm(X, y)
-        print(f"Results for {appliance}: {results}")
+        print(f"Results for {appliance}: {{k: v for k, v in results.items() if k != 'model'}}")
+        # Save the trained model
+        model_path = os.path.join(PREPROCESS_ROOT, appliance, "trfnilm_model.joblib")
+        joblib.dump(results["model"], model_path)
+        print(f"Saved model to {model_path}")
 
 if __name__ == "__main__":
     main()
