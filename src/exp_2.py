@@ -11,6 +11,7 @@ from collections import Counter
 from sklearn.preprocessing import LabelEncoder
 from dataset.load_cooll_data import *
 from dataset.load_whited_data import *
+from dataset.load_redd_data import *
 from sklearn.metrics import recall_score, precision_score, f1_score, accuracy_score
 from sklearn.ensemble import RandomForestClassifier
 from dataset.load_plaid_data import leave_one_house_out_plaid, split_tune_set, split_tune_set_percentage
@@ -58,6 +59,10 @@ def exp_case2_transfer(args, input_feature, label, dataset, house_label=None, am
     if dataset == "plaid":
         houses = np.unique(house_label)
         n = len(houses)
+    
+    if dataset == "redd":
+        # For REDD, we have only one house (House 3), so we'll do a simple train-test split
+        n = 1
 
     # Number of Leave-one-house-out
     for i in range(n):
@@ -66,14 +71,32 @@ def exp_case2_transfer(args, input_feature, label, dataset, house_label=None, am
 
         if dataset in ["whited", "cooll"]:
             Xtrain, ytrain, Xtest, ytest = get_train_test_data(train_set, test_set, idx=i)
+        
+        if dataset == "redd":
+            # Use our properly extracted training, validation, and testing datasets
+            # Load training dataset
+            Xtrain = np.load(f"src/data/{args.dataset}/training_datasets/X.npy")
+            ytrain = np.load(f"src/data/{args.dataset}/training_datasets/Y.npy")
+            
+            # Load validation dataset  
+            X_val = np.load(f"src/data/{args.dataset}/validation_datasets/X.npy")
+            y_val = np.load(f"src/data/{args.dataset}/validation_datasets/Y.npy")
+            
+            # Load testing dataset (cross-house evaluation: House 1)
+            Xtest = np.load(f"src/data/{args.dataset}/testing_datasets/X.npy")
+            ytest = np.load(f"src/data/{args.dataset}/testing_datasets/Y.npy")
+            
+            print(f"REDD Data Loaded:")
+            print(f"  Training: {Xtrain.shape[0]} samples from House 3")
+            print(f"  Validation: {X_val.shape[0]} samples from House 3")
+            print(f"  Testing: {Xtest.shape[0]} samples from House 1 (cross-house)")
 
-            # Xtrain, ytrain, Xtest, ytest, Xtune, ytune = get_train_test_tune_data(train_set, test_set, tune_set, idx=i)
+        if dataset != "redd":
+            le = LabelEncoder()
+            ytrain = le.fit_transform(ytrain)
+            ytest = le.transform(ytest)
 
-        le = LabelEncoder()
-        ytrain = le.fit_transform(ytrain)
-        ytest = le.transform(ytest)
-
-        Xtrain, X_val, ytrain, y_val = train_test_split(Xtrain, ytrain, test_size=0.2, stratify=ytrain)
+            Xtrain, X_val, ytrain, y_val = train_test_split(Xtrain, ytrain, test_size=0.2, stratify=ytrain)
 
         """for others """
         if dataset == "plaid":
@@ -104,6 +127,38 @@ def exp_case2_transfer(args, input_feature, label, dataset, house_label=None, am
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, 'w') as f:
             json.dump(results, f, indent=4, separators=(",", ": "))
+            
+        # For REDD, also evaluate on the full testing dataset (House 1) and save separately
+        if dataset == "redd":
+            # Load the full testing dataset
+            X_test_full = np.load(f"src/data/{args.dataset}/testing_datasets/X.npy")
+            y_test_full = np.load(f"src/data/{args.dataset}/testing_datasets/Y.npy")
+            
+            # Make predictions on full testing dataset
+            y_test_pred_full = tgt_model.predict(X_test_full)
+            
+            test_results = {
+                "Testing_Dataset_Results": {
+                    "Description": "Cross-house evaluation: Model trained on House 3, tested on House 1",
+                    "Training_samples": len(ytrain),
+                    "Testing_samples": len(y_test_full),
+                    "Accuracy": float(accuracy_score(y_test_full, y_test_pred_full) * 100),
+                    "F1_macro": float(f1_score(y_test_full, y_test_pred_full, average="macro") * 100),
+                    "Precision": float(precision_score(y_test_full, y_test_pred_full, average="macro") * 100),
+                    "Recall": float(recall_score(y_test_full, y_test_pred_full, average="macro") * 100),
+                    "Number of samples": len(y_test_full)
+                }
+            }
+            
+            # Save testing results to separate file
+            test_file_path = f"results/{str(args.dataset)}/kt_{str(args.k_target)}_ori/TESTING_RESULTS_{str(i)}.json"
+            with open(test_file_path, 'w') as f:
+                json.dump(test_results, f, indent=4, separators=(",", ": "))
+            
+            print(f"Testing Results:")
+            print(f"  - Full Testing Dataset: {len(y_test_full)} samples from House 1")
+            print(f"  - Cross-house Accuracy: {test_results['Testing_Dataset_Results']['Accuracy']:.2f}%")
+            print(f"  - Results saved to: {test_file_path}")
 
 
 parser = argparse.ArgumentParser("Training")

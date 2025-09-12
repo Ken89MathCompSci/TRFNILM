@@ -1,0 +1,54 @@
+{
+    "Overall": {
+        "Accuracy": 86.50674662668666,
+        "F1_macro": 86.38349478364144,
+        "Precision": 86.43965300014051,
+        "Recall": 86.39873140857392,
+        "Total_samples": 667
+    },
+    "Per_Appliance": {
+        "dishwasher": {
+            "Accuracy": 90.55555555555556,
+            "Precision": 87.63440860215054,
+            "Recall": 90.55555555555556,
+            "F1_score": 89.07103825136612,
+            "True_samples": 180,
+            "Correct_predictions": 163
+        },
+        "fridge": {
+            "Accuracy": 91.11111111111111,
+            "Precision": 87.70053475935828,
+            "Recall": 91.11111111111111,
+            "F1_score": 89.3732970027248,
+            "True_samples": 180,
+            "Correct_predictions": 164
+        },
+        "microwave": {
+            "Accuracy": 78.88888888888889,
+            "Precision": 84.02366863905326,
+            "Recall": 78.88888888888889,
+            "F1_score": 81.37535816618912,
+            "True_samples": 180,
+            "Correct_predictions": 142
+        },
+        "washingmachine": {
+            "Accuracy": 85.03937007874016,
+            "Precision": 86.4,
+            "Recall": 85.03937007874016,
+            "F1_score": 85.71428571428571,
+            "True_samples": 127,
+            "Correct_predictions": 108
+        }
+    },
+    "Experiment_Details": {
+        "Description": "Cross-house evaluation: Model trained on House 3, tested on House 1",
+        "Training_samples": 177,
+        "Validation_samples": 188,
+        "Tuning_samples": 75,
+        "Testing_samples": 667,
+        "k_target": 1,
+        "n_trees": 9,
+        "Training_source": "House 3",
+        "Testing_source": "House 1"
+    }
+}

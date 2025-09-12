@@ -301,7 +301,7 @@ def cut_from_left_right(dTree, node, bool_left_right):
     dTree.tree_.__setstate__(dic)
     depths = depth_array(dTree, np.linspace(
         0, dTree.tree_.node_count - 1, dTree.tree_.node_count).astype(int))
-    dTree.tree_.max_depth = np.max(depths)
+    dTree.tree_.max_depth = int(np.max(depths))
 
     return inds.index(repl_node)
 
@@ -318,7 +318,7 @@ def cut_into_leaf2(dTree, node):
     inds = list(
         set(np.linspace(0, size_init - 1, size_init).astype(int)) - set(node_to_rem))
     depths = depth_array(dTree, inds)
-    dic['max_depth'] = np.max(depths)
+    dic['max_depth'] = int(np.max(depths))
 
     dic['capacity'] = dTree.tree_.capacity - len(node_to_rem)
     dic['node_count'] = dTree.tree_.node_count - len(node_to_rem)
@@ -634,4 +634,3 @@ def SER_RF(random_forest, X_target, y_target, original_ser=True, bootstrap_=Fals
 
 def bootstrap(size):
     return np.random.choice(np.linspace(0, size - 1, size).astype(int), size, replace=True)
-

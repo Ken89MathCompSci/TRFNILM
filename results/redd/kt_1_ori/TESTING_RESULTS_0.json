@@ -1,0 +1,12 @@
+{
+    "Testing_Dataset_Results": {
+        "Description": "Cross-house evaluation: Model trained on House 3, tested on House 1",
+        "Training_samples": 177,
+        "Testing_samples": 742,
+        "Accuracy": 82.0754716981132,
+        "F1_macro": 81.93153484709042,
+        "Precision": 83.15334649669593,
+        "Recall": 81.38380281690142,
+        "Number of samples": 742
+    }
+}
